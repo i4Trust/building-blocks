@@ -148,10 +148,22 @@ Trusted data exchange among participants provides certainty that participants in
 claim to be, and that they comply with defined rules/agreements. Trust refers to the fact that data providers and data 
 consumers can rely on the identity of the members of the data ecosystem and beyond that, between different security domains.
 
-**tbd iSHARE satellite+concept**
+[iSHARE](https://ishareworks.atlassian.net/wiki/spaces/IS/overview) brings a scheme that enables organizations to give each 
+other access to their data. It results in a set of agreements 
+which improve circumstances for data exchange and focuses on the topics of Identification, Authentication and 
+Authorisation. From a technical perspective, iSHARE is an authentication & authorization protocol for both machine2machine (M2M) 
+and human2machine (H2M) communication based on a JSON REST API architecture. Authentication is heavily based on Public Key 
+Infrastructure (PKI) and therefore certificates and public / private key pairs. iSHARE relies heavily on signed JSON Web Tokens 
+for protecting the integrity of message content. Every party of iSHARE validates signatures and interpret the content of JWTs. 
+Every party creates and signs these tokens depending on the context. The Scheme Owner is playing the role of a trust authority 
+providing a trusted framework 
+which keeps the scheme, and its network of participants, operating properly. Every participant to the iSHARE Scheme must have a 
+relation with the Scheme Owner, and can check at the Scheme Owner whether other parties participate in iSHARE and are trustable. 
+
 
 Furthermore, **IDS Connector technology**, as described in 
-the [IDS Reference Architecture Model (RAM)](https://internationaldataspaces.org/download/16630/), emerges as a solid basis.
+the [IDS Reference Architecture Model (RAM)](https://internationaldataspaces.org/download/16630/), emerges as a solid basis 
+which can be combined with the iSHARE Scheme.
 The FIWARE Community has incubated an open source implementation of this technology, 
 the [TRUE (TRUsted Engineering) Connector](https://github.com/Engineering-Research-and-Development/true-connector) that has 
 already been tested on how it can integrate with the rest of core FIWARE components. The TRUE Connector enables trusted data 
@@ -173,19 +185,25 @@ implementing the PEP and PDP functionalities.
 
 _PEP_:
 
-	- [Wilma](https://github.com/ging/fiware-pep-proxy)
-	- [API Umbrella](https://github.com/FIWARE/api-umbrella)
-    - [CoatRack](https://github.com/coatrack/coatrack/)
+- [Wilma](https://github.com/ging/fiware-pep-proxy)
+- [API Umbrella](https://github.com/FIWARE/api-umbrella)
+- [CoatRack](https://github.com/coatrack/coatrack/)
+
 _PDP_:
 
-	- [AuthZForce](https://github.com/authzforce/server)
-    - [Keyrock](https://github.com/ging/fiware-idm)
-	- [API Umbrella](https://github.com/FIWARE/api-umbrella)
+- [AuthZForce](https://github.com/authzforce/server)
+- [Keyrock](https://github.com/ging/fiware-idm)
+- [API Umbrella](https://github.com/FIWARE/api-umbrella)
 
 In addition, [Keyrock](https://github.com/ging/fiware-idm) also implements Policy Administration Point (PAP) and Policy 
 Management Point (PMP) standard [XACML](https://en.wikipedia.org/wiki/XACML) functions.
 
-**tbd iSHARE policies**
+For defining access policies, iSHARE defines the 
+[delegation evidence data model](https://dev.ishareworks.org/delegation/delegation-evidence.html) which is structured according 
+to a JSON port of 
+the XACML standard. A key functionality of iSHARE is delegating rights to another party, authorising them to act on your behalf. 
+In that sense, a delegation evidence expresses the delegation of rights from a delegator to the delegate . Rights are expressed in 
+rules in terms of allowed actions to be performed on resources, under the licenses as defined in policySets.
 
 
 
