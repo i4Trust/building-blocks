@@ -9,7 +9,7 @@ data resources in a standard manner. Relying on Marketplace services, on the oth
 Data Spaces can publish
 offerings around access to data resources or data processing services under concrete terms and conditions which
 establish data usage/access policies to be enforced and may include pricing. Finally, components implementing
-Identity and Access Management (IAM) functions enable to secure that data is accessed by the right parties and that
+Identity and Access Management (IAM) functions enable to ensure that data is accessed by the right parties and that
 defined access policies are enforced.
 
 
@@ -27,7 +27,7 @@ defined access policies are enforced.
 
 
 
-# Background
+## Background
 
 A **data space** is defined as a decentralised infrastructure for trustworthy data sharing and exchange in data
 ecosystems based on commonly agreed principles. From a technical perspective, a number of **technology building blocks**
@@ -79,7 +79,7 @@ what concrete standards and design principles are adopted, since they have to be
 
 ## Technology Building blocks
 
-This section describes the different components i4Trust brings materializing the different technical building blocks
+This section describes the different components i4Trust brings, materializing the different technical building blocks
 enabling the soft infrastructure and global services required for the creation of data spaces.
 
 
@@ -92,7 +92,7 @@ consumers, unknown by them a priori, will know how to retrieve and consume data 
 on the other hand, must know how data available through endpoints they discover can be consumed. This is achieved by 
 adopting domain-agnostic common APIs for data exchange.
 
-The **NGSI API** represents such API and many different systems have been developed using it in domains such as smart cities, 
+The **NGSI API** represents such an API and many different systems have been developed using it in domains such as smart cities, 
 smart manufacturing, smart energy, smart water, smart agrifood, smart ports, or smart health. Data exchange based on the 
 NGSI API is implemented by the FIWARE 
 [Core Context Broker components](https://github.com/FIWARE/catalogue#core-context-broker-components) like the Orion-LD, 
@@ -154,7 +154,7 @@ which improve circumstances for data exchange and focuses on the topics of Ident
 Authorisation. From a technical perspective, iSHARE is an authentication & authorization protocol for both machine2machine (M2M) 
 and human2machine (H2M) communication based on a JSON REST API architecture. Authentication is heavily based on Public Key 
 Infrastructure (PKI) and therefore certificates and public / private key pairs. iSHARE relies heavily on signed JSON Web Tokens 
-for protecting the integrity of message content. Every party of iSHARE validates signatures and interpret the content of JWTs. 
+for protecting the integrity of message content. Every party of iSHARE validates signatures and interprets the content of JWTs. 
 Every party creates and signs these tokens depending on the context. The Scheme Owner is playing the role of a trust authority 
 providing a trusted framework 
 which keeps the scheme, and its network of participants, operating properly. Every participant to the iSHARE Scheme must have a 
@@ -198,7 +198,7 @@ _PDP_:
 In addition, [Keyrock](https://github.com/ging/fiware-idm) also implements Policy Administration Point (PAP) and Policy 
 Management Point (PMP) standard [XACML](https://en.wikipedia.org/wiki/XACML) functions.
 
-For defining access policies, iSHARE defines the 
+For defining access policies, iSHARE brings the 
 [delegation evidence data model](https://dev.ishareworks.org/delegation/delegation-evidence.html) which is structured according 
 to a JSON port of 
 the XACML standard. A key functionality of iSHARE is delegating rights to another party, authorising them to act on your behalf. 
