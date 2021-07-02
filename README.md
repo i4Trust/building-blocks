@@ -80,24 +80,43 @@ what concrete standards and design principles are adopted, since they have to be
 ## Technology Building blocks
 
 This section describes the different components i4Trust brings materializing the different technical building blocks
-enabling the soft infrastructure and global services required for creation of data spaces.
+enabling the soft infrastructure and global services required for the creation of data spaces.
+
 
 ### Data Interoperability
 
 #### Data Exchange API
 
-tbd
+Data providers joining data spaces must be able to publish data resources at well defined endpoints knowing that data 
+consumers, unknown by them a priori, will know how to retrieve and consume data through those endpoints. Data consumers, 
+on the other hand, must know how data available through endpoints they discover can be consumed. This is achieved by 
+adopting domain-agnostic common APIs for data exchange.
+
+The **NGSI API** represents such API and many different systems have been developed using it in domains such as smart cities, 
+smart manufacturing, smart energy, smart water, smart agrifood, smart ports, or smart health. Data exchange based on the 
+NGSI API is implemented by the FIWARE 
+[Core Context Broker components](https://github.com/FIWARE/catalogue#core-context-broker-components) like the Orion-LD, 
+Scorpio or Stellio Context Brokers.
 
 
 
 #### Data Models & Formats
 
-tbd
+Combined with the data exchange APIs, achieving full interoperability also requires the adoption of common data models to be 
+represented in formats compatible with the API. The 
+[Smart Data Model](https://github.com/smart-data-models) initiative provides a library of data model specifications mapped 
+into concrete JSON and JSON-LD data structures compatible with the NGSI-LD API.
+
 
 
 #### Provenance & Traceability
 
-tbd
+FIWARE brings components which provide the means for tracing and tracking in the process of data provision and data 
+consumption/use. It provides the basis for a number of important functions, from identification of the provenance of 
+data to audit-proof logging of NGSI-LD transactions. For those data spaces with strong requirements on transparency and 
+certification, FIWARE brings 
+components (i.e., [Canis Major](https://github.com/FIWARE/CanisMajor)) that ease recording of transaction logs 
+into different **Distributed Ledgers / Blockchains**.
 
 
 
@@ -112,18 +131,61 @@ building blocks, based on mature security standards that will be used by all par
 
 #### Identity Management
 
-tbd
+The building block of Identity Management allows identification, authentication, and authorization of organizations, 
+individuals, machines and other actors participating in a data space. 
+FIWARE brings the [Keyrock](https://github.com/ging/fiware-idm) component which 
+supports [OpenIdConnect](https://openid.net/connect/), 
+[SAML 2.0](http://docs.oasis-open.org/security/saml/Post2.0/sstc-saml-tech-overview-2.0.html) 
+and [OAuth2](https://oauth.net/2/) standards. Quite relevant for data spaces deployed in Europe, Keyrock also resolves 
+integration with [eIDAS](https://ec.europa.eu/cefdigital/wiki/display/CEFDIGITAL/eID), a building block provided by the 
+European Commission that enables the mutual recognition of national electronic identification schemes (eID) across borders, 
+allowing European citizens to use their national eIDs when accessing online services from other European countries.
 
 
 #### Trusted exchange
 
-tbd
+Trusted data exchange among participants provides certainty that participants involved in the data exchange are who they 
+claim to be, and that they comply with defined rules/agreements. Trust refers to the fact that data providers and data 
+consumers can rely on the identity of the members of the data ecosystem and beyond that, between different security domains.
+
+**tbd iSHARE satellite+concept**
+
+Furthermore, **IDS Connector technology**, as described in 
+the [IDS Reference Architecture Model (RAM)](https://internationaldataspaces.org/download/16630/), emerges as a solid basis.
+The FIWARE Community has incubated an open source implementation of this technology, 
+the [TRUE (TRUsted Engineering) Connector](https://github.com/Engineering-Research-and-Development/true-connector) that has 
+already been tested on how it can integrate with the rest of core FIWARE components. The TRUE Connector enables trusted data 
+exchange in data spaces that intend to be aligned with 
+the [IDS Reference Architecture Model](https://internationaldataspaces.org/wp-content/uploads/IDS-Reference-Architecture-Model-3.0-2019.pdf). 
+It brings the necessary capabilities to interact with external Identity Providers for verification and validation of tokens, 
+and also allows for usage control. It is also referenced in 
+the [Security Access and API Management](https://github.com/FIWARE/catalogue/blob/master/security/README.md) section of the 
+FIWARE catalog.
+
 
 
 #### Access & Usage Control / Policies
 
-tbd
+Access and usage control guarantees enforcement of data access and usage policies defined as part of the terms and conditions established 
+when data resources or services are published or negotiated between providers and consumers. An API proxy plays the role of the 
+Policy Enforcement Point (PEP) and requires an additional Policy Decision Point (PDP). Below listed are components of the FIWARE catalog 
+implementing the PEP and PDP functionalities.
 
+_PEP_:
+
+	- [Wilma](https://github.com/ging/fiware-pep-proxy)
+	- [API Umbrella](https://github.com/FIWARE/api-umbrella)
+    - [CoatRack](https://github.com/coatrack/coatrack/)
+_PDP_:
+
+	- [AuthZForce](https://github.com/authzforce/server)
+    - [Keyrock](https://github.com/ging/fiware-idm)
+	- [API Umbrella](https://github.com/FIWARE/api-umbrella)
+
+In addition, [Keyrock](https://github.com/ging/fiware-idm) also implements Policy Administration Point (PAP) and Policy 
+Management Point (PMP) standard [XACML](https://en.wikipedia.org/wiki/XACML) functions.
+
+**tbd iSHARE policies**
 
 
 
@@ -147,6 +209,17 @@ To support the offering of data resources and services under defined terms and c
 established. This building block supports publication of these offerings, management of processes linked to the creation
 and monitoring of smart contracts (which clearly describe the rights and obligations for data and service usage), and
 access to data and services.
+
+The [Business API Ecosystem](https://github.com/FIWARE-TMForum/Business-API-Ecosystem) provides sellers the means for
+managing, publishing, and generating revenue of their products, apps, data, and services. The Business API Ecosystem
+enables the monetization of different kinds of assets (both digital and physical) across the whole service life cycle,
+from offer creation through to charging, accounting and revenue settlement and sharing. It relies on a set of standard
+APIs (and its reference implementations) provided by the TMForum in its TMF API ecosystem.
+
+[Idra](https://github.com/OPSILab/Idra) is a web application able to federate existing Open Data Management Systems
+(ODMS) based on different technologies providing a unique access point to search and discover open datasets coming from
+heterogeneous sources. It supports natively ODMS based on CKAN, DKAN, Socrata, Orion Context Broker (NGSI v2, NGSI-LD)
+and many other technologies: Idra provides also a set of APIs to federate ODMS not natively supported.
 
 
 #### Data Usage Accounting
