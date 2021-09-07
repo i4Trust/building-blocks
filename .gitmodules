@@ -1,0 +1,6 @@
+[submodule "fiware-catalogue"]
+	path = fiware-catalogue
+	url = https://github.com/FIWARE/catalogue.git
+[submodule "i4trust-tutorials"]
+	path = i4trust-tutorials
+	url = https://github.com/i4Trust/tutorials.git
