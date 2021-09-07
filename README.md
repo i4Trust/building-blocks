@@ -1,16 +1,16 @@
 # i4Trust Building Blocks
 
-This document describes the components of i4Trust that can be picked up, integrated together, and eventually
-combined with other components in order to build the soft infrastructure and services required for creating data spaces
-where smart applications from multiple domains can participate and exchange data. Smart applications participating in
-such data spaces share data using the open standard APIs and rely
-on common data models. Data Publication components enable the publication and discovery of
-data resources in a standard manner. Relying on Marketplace services, on the other hand, participants of created 
-Data Spaces can publish
-offerings around access to data resources or data processing services under concrete terms and conditions which
-establish data usage/access policies to be enforced and may include pricing. Finally, components implementing
-Identity and Access Management (IAM) functions enable to ensure that data is accessed by the right parties and that
-defined access policies are enforced.
+This repository describes the components of i4Trust that can be picked up, integrated together, and eventually 
+combined with other components in order to build the soft infrastructure and services required for creating data 
+spaces where smart applications can participate and exchange data. Smart applications participating in i4Trust 
+data spaces share digital twin data using the open standard NGSI-LD API and relying on common data models. Data 
+Publication components enable the publication and discovery of data resources in a standard manner. Relying on 
+Marketplace services, on the other hand, participants in i4Trust Data Spaces can publish offerings around access 
+to digital twin data resources or data processing services under concrete terms and conditions which establish 
+data usage/access policies to be enforced and may include pricing. Finally, components implementing Identity and 
+Access Management (IAM) functions enable to ensure that data is accessed by trusted parties and that defined access 
+policies are enforced.
+
 
 
 ## Contents
@@ -20,7 +20,7 @@ defined access policies are enforced.
     -   [Data Interoperability](#data-interoperability)
     -   [Data Sovereignty and Trust](#data-sovereignty-and-trust)
     -   [Data Value Creation](#data-value-creation)
--   [Integrating Building Blocks for data spaces](#integrating-building-blocks-for-data-spaces)
+-   [Integrating Building Blocks for the creation of i4Trust data spaces](#integrating-building-blocks-for-the-creation-of-i4trust-data-spaces)
 	-   [Data Service Provider](#data-service-provider)
     -   [i4Trust Marketplace](#i4trust-marketplace)
 
@@ -29,104 +29,110 @@ defined access policies are enforced.
 
 ## Background
 
-A **data space** is defined as a decentralised infrastructure for trustworthy data sharing and exchange in data
-ecosystems based on commonly agreed principles. From a technical perspective, a number of **technology building blocks**
-are required ensuring:
+A data space is defined as a decentralised infrastructure for effective and trustworthy data sharing in data ecosystems 
+based on commonly agreed principles. From a technical perspective, a number of technology building blocks are 
+required ensuring:
 
--   **Data interoperability** - Data spaces should provide a solid framework for an efficient exchange of data among
-    participants, supporting full decoupling of data providers and consumers. This requires the adoption of a “common
-    lingua” every participant uses, materialized in the adoption of common APIs for the data exchange, and the
-    definition of common data models. Common mechanisms for traceability of data exchange transactions and data
-    provenance, are also required.
+-   **Data interoperability** - Data spaces should provide a solid framework for an effective exchange of data among 
+	participants, supporting full decoupling of data providers and consumers. This requires the adoption of 
+	a “common lingua” every participant uses, materialized in the adoption of common APIs for the data exchange, and 
+	the definition of common data models. Common mechanisms for traceability of data exchange transactions and data 
+	provenance, are also relevant.
 
--   **Data Sovereignty and trust** - Data spaces should bring technical means for guaranteeing that participants in a
-    data space can trust each other and exercise sovereignty over data they share. This requires the adoption of common
-    standards for managing the identity of participants, the verification of their truthfulness and the enforcement of
-    policies agreed upon data access and usage control.
+-   **Data Sovereignty and trust** - Data spaces should bring technical means for guaranteeing that participants in a 
+	data space can trust each other and exercise sovereignty over data they share. This requires the adoption of common 
+	standards for managing the identity of participants, the verification of their truthfulness and the enforcement of 
+	policies defined for data access and usage control.
 
--   **Data value creation** - Data spaces should provide support for the creation of multi-sided markets where
-    participants can generate value out of sharing data (i.e., creating data value chains). This requires the adoption
-    of common mechanisms enabling the definition of terms and conditions (including pricing) linked to data offerings,
-    the publication and discovery of such offerings and the management of all the necessary steps supporting the
-    lifecycle of contracts that are established when a given participant acquires the rights to access and use data.
+-   **Data value creation** - Data spaces should provide support for the creation of multi-sided markets where 
+	participants can generate value out of sharing data (i.e., creating data value chains). This requires the adoption 
+	of common mechanisms enabling the definition of terms and conditions (including pricing) linked to data offerings, 
+	the publication and discovery of such offerings and the management of all the necessary steps, including clearing, 
+	payment and billing functions, supporting the lifecycle of contracts that are established when a given participant 
+	acquires the rights to access and use data.
 
-Besides the adoption of a common technology foundation, data spaces also require **governance**, that is the adoption of
-a number of business, operational and organizational agreements among participants. Business agreements, for example,
-specify what kind of terms and conditions can regulate the sharing of data between participants and the legal framework
-supporting contracts established through the data space. Operational agreements, on the other hand, regulate policies
-that have to be enforced during data space operation like, for example, compliance with GDPR (General Data Protection
-Regulation) or the 2nd Payment Services Directive (PSD2) in the finance sector. They may also comprise the definition of
-tools that operators of cloud infrastructures or global services supporting data spaces must implement, enabling
-auditing of certain processes or the adoption of cyber-security practices. In addition, organizational agreements
-establish the governance bodies (very much like ICANN for the Internet). They deal with the identification of concrete
-specifications that products implementing technology building blocks in a data space should comply with, as well as the
-business and operational agreements to be adopted. The complete taxonomy of building blocks required for creating data
-spaces is illustrated in the following figure.
+Besides the adoption of a common technology foundation, data spaces also require governance, that is the adoption of a 
+number of business, operational and organizational agreements among participants. Business agreements, for example, 
+specify what kind of terms and conditions can regulate the sharing of data between participants and the legal framework 
+supporting contracts established through the data space. Operational agreements, on the other hand, regulate policies 
+that have to be enforced during data space operation like, for example, compliance with 
+GDPR (General Data Protection Regulation) or the 2nd Payment Services Directive (PSD2) in the finance sector. They may 
+also comprise the definition of tools that operators of cloud infrastructures or global services supporting data spaces 
+must implement, enabling auditing of certain processes or the adoption of cyber-security practices. In addition, 
+organizational agreements establish the governance bodies (very much like ICANN for the Internet). They deal with the 
+identification of concrete specifications that products implementing technology building blocks in a data space should 
+comply with, as well as the business and operational agreements to be adopted. The complete taxonomy of building blocks 
+required for creating data spaces is illustrated in the following figure.
 
 ![BuildingBlocks](https://i4trust.github.io/building-blocks/img/building-blocks.png "Data Spaces Building Blocks")
 
-Sharing of data within a given data space should not be limited to a single domain. This would severely limit the
-creation of new innovative services since individuals and organizations usually act in multiple domains at the same time
-and many opportunities will flourish when data generated within organizations operating in certain domain (management of
-traffic in cities, for example) is shared for its exploitation in processes relevant to other domains (continuing with
-the example, logistics). Therefore, technology building blocks for data spaces must be domain-agnostic. On the other
-hand, they should rely on open standards, allowing multiple infrastructure and global service providers to emerge and
-support data spaces, without getting locked in any particular provider. Given this, while making things work in living
-labs and pilots is relatively easy, the main challenge towards definition of successful data spaces is the decision of
-what concrete standards and design principles are adopted, since they have to be accepted by all participants.
+Sharing of data within a given data space should not be limited to a single domain. This would severely limit the creation 
+of new innovative services since individuals and organizations usually act in multiple domains at the same time and many 
+opportunities will flourish when data generated within organizations operating in certain domain (data related to traffic 
+in cities, for example) is shared for its exploitation in processes relevant to other 
+domains (continuing with the example, logistics). Therefore, technology building blocks for data spaces must 
+be domain-agnostic. On the other hand, they should rely on open standards, allowing multiple infrastructure and global 
+service providers to emerge and support data spaces, without getting locked in any particular provider. Given this, 
+while making things work in living labs and pilots is relatively easy, the main challenge towards definition of successful 
+data spaces is the decision of what concrete standards and design principles are adopted, since they have to be accepted 
+by all participants.
 
 
 
 ## Technology Building blocks
 
-This section describes the different components i4Trust brings, materializing the different technical building blocks
-enabling the soft infrastructure and global services required for the creation of data spaces.
+This section describes the different open source components i4Trust brings, materializing the different technical building 
+blocks enabling the soft infrastructure and global services required for the creation of data spaces.
 
 
 ### Data Interoperability
 
 #### Data Exchange API
 
-Data providers joining data spaces must be able to publish data resources at well defined endpoints knowing that data 
-consumers, unknown by them a priori, will know how to retrieve and consume data through those endpoints. Data consumers, 
-on the other hand, must know how data available through endpoints they discover can be consumed. This is achieved by 
-adopting domain-agnostic common APIs for data exchange.
+Data providers joining data spaces must be able to publish data resources at well defined endpoints knowing that data consumers, 
+unknown by them a priori, will know how to retrieve and consume data through those endpoints. Data consumers, on the other 
+hand, must know how data available through endpoints they discover can be consumed. This is achieved by adopting domain-agnostic 
+common APIs for data exchange.
 
-The **NGSI API** represents such an API and many different systems have been developed using it in domains such as smart cities, 
-smart manufacturing, smart energy, smart water, smart agrifood, smart ports, or smart health. Data exchange based on the 
-NGSI API is implemented by the FIWARE 
-[Core Context Broker components](https://github.com/FIWARE/catalogue#core-context-broker-components) like the Orion-LD, 
-Scorpio or Stellio Context Brokers.
+In i4Trust data spaces, participants are expected to exchange digital twin data, that is the values of attributes characterizing 
+entities representing physical world objects (e.g., a street, a room within a floor of a building, a vehicle) or real world 
+concepts (e.g., a trouble ticket, an alarm).
+
+The **NGSI API** is the API used in i4Trust for the exchange of digital twin data. Many different systems have been developed 
+using it in domains such as smart cities, smart manufacturing, smart energy, smart water, smart agrifood, smart ports, or smart 
+health. Digital twin data exchange based on the NGSI API is supported by any of the existing 
+FIWARE [Core Context Broker components](https://github.com/FIWARE/catalogue#core-context-broker-components) (Orion-LD, Scorpio 
+or Stellio).
+
 
 
 
 #### Data Models & Formats
 
 Combined with the data exchange APIs, achieving full interoperability also requires the adoption of common data models to be 
-represented in formats compatible with the API. The 
-[Smart Data Model](https://github.com/smart-data-models) initiative provides a library of data model specifications mapped 
-into concrete JSON and JSON-LD data structures compatible with the NGSI-LD API.
+represented in formats compatible with the API. 
+The [Smart Data Model](https://github.com/smart-data-models) initiative provides a library of data model specifications 
+mapped into concrete JSON and JSON-LD data structures compatible with the NGSI-LD API, therefore suitable for supporting data 
+interoperability in i4Trust data spaces.
+
 
 
 
 #### Provenance & Traceability
 
 FIWARE brings components which provide the means for tracing and tracking in the process of data provision and data 
-consumption/use. It provides the basis for a number of important functions, from identification of the provenance of 
-data to audit-proof logging of NGSI-LD transactions. For those data spaces with strong requirements on transparency and 
-certification, FIWARE brings 
-components (i.e., [Canis Major](https://github.com/FIWARE/CanisMajor)) that ease recording of transaction logs 
+consumption/use. It provides the basis for a number of important functions, from identification of the provenance of data to 
+audit-proof logging of NGSI-LD transactions. For those data spaces with strong requirements on transparency and certification, 
+FIWARE brings components (i.e., [Canis Major](https://github.com/FIWARE/CanisMajor)) that ease recording of transaction logs 
 into different **Distributed Ledgers / Blockchains**.
 
 
 
 
 
-### Data Sovereignty and Trust
 
-Data spaces must provide means for guaranteeing organizations joining data spaces that they can trust the other
-participants and that they will be able to exercise sovereignty on their data. That requires the definition of common
-building blocks, based on mature security standards that will be used by all participants in the data space.
+
+### Data Sovereignty and Trust
 
 
 #### Identity Management
@@ -139,7 +145,10 @@ supports [OpenIdConnect](https://openid.net/connect/),
 and [OAuth2](https://oauth.net/2/) standards. Quite relevant for data spaces deployed in Europe, Keyrock also resolves 
 integration with [eIDAS](https://ec.europa.eu/cefdigital/wiki/display/CEFDIGITAL/eID), a building block provided by the 
 European Commission that enables the mutual recognition of national electronic identification schemes (eID) across borders, 
-allowing European citizens to use their national eIDs when accessing online services from other European countries.
+allowing European citizens and legal entities to use their national eIDs when accessing online services from other 
+European countries. Additionally, regional certificates that match the requirements similar to eIDAS are legally recognized 
+for the purpose of digital signatures and can be added and made interoperable.
+
 
 
 #### Trusted exchange
@@ -155,24 +164,10 @@ Authorisation. From a technical perspective, iSHARE is an authentication & autho
 and human2machine (H2M) communication based on a JSON REST API architecture. Authentication is heavily based on Public Key 
 Infrastructure (PKI) and therefore certificates and public / private key pairs. iSHARE relies heavily on signed JSON Web Tokens 
 for protecting the integrity of message content. Every party of iSHARE validates signatures and interprets the content of JWTs. 
-Every party creates and signs these tokens depending on the context. The Scheme Owner is playing the role of a trust authority 
-providing a trusted framework 
+Every party creates and signs these tokens depending on the context. The Scheme Owner (iSHARE Satellite) is playing the role of 
+a trust authority providing a trusted framework 
 which keeps the scheme, and its network of participants, operating properly. Every participant to the iSHARE Scheme must have a 
 relation with the Scheme Owner, and can check at the Scheme Owner whether other parties participate in iSHARE and are trustable. 
-
-
-Furthermore, **IDS Connector technology**, as described in 
-the [IDS Reference Architecture Model (RAM)](https://internationaldataspaces.org/download/16630/), emerges as a solid basis 
-which can be combined with the iSHARE Scheme.
-The FIWARE Community has incubated an open source implementation of this technology, 
-the [TRUE (TRUsted Engineering) Connector](https://github.com/Engineering-Research-and-Development/true-connector) that has 
-already been tested on how it can integrate with the rest of core FIWARE components. The TRUE Connector enables trusted data 
-exchange in data spaces that intend to be aligned with 
-the [IDS Reference Architecture Model](https://internationaldataspaces.org/wp-content/uploads/IDS-Reference-Architecture-Model-3.0-2019.pdf). 
-It brings the necessary capabilities to interact with external Identity Providers for verification and validation of tokens, 
-and also allows for usage control. It is also referenced in 
-the [Security Access and API Management](https://github.com/FIWARE/catalogue/blob/master/security/README.md) section of the 
-FIWARE catalog.
 
 
 
@@ -180,20 +175,8 @@ FIWARE catalog.
 
 Access and usage control guarantees enforcement of data access and usage policies defined as part of the terms and conditions established 
 when data resources or services are published or negotiated between providers and consumers. An API proxy plays the role of the 
-Policy Enforcement Point (PEP) and requires an additional Policy Decision Point (PDP). Below listed are components of the FIWARE catalog 
-implementing the PEP and PDP functionalities.
-
-_PEP_:
-
-- [Wilma](https://github.com/ging/fiware-pep-proxy)
-- [API Umbrella](https://github.com/FIWARE/api-umbrella)
-- [CoatRack](https://github.com/coatrack/coatrack/)
-
-_PDP_:
-
-- [AuthZForce](https://github.com/authzforce/server)
-- [Keyrock](https://github.com/ging/fiware-idm)
-- [API Umbrella](https://github.com/FIWARE/api-umbrella)
+Policy Enforcement Point (PEP) and requires an additional Policy Decision Point (PDP). 
+In the current release of i4Trust, [API Umbrella](https://github.com/FIWARE/api-umbrella) implements both PEP and PDP functionalities.
 
 In addition, [Keyrock](https://github.com/ging/fiware-idm) also implements Policy Administration Point (PAP) and Policy 
 Management Point (PMP) standard [XACML](https://en.wikipedia.org/wiki/XACML) functions.
@@ -207,26 +190,25 @@ rules in terms of allowed actions to be performed on resources, under the licens
 
 
 
-### Data Value Creation
 
-Loose coupling of participants is a fundamental principle in data spaces. Data providers and consumers do not
-necessarily know about each other. Therefore, it becomes essential to incorporate building blocks enabling the
-management of data resources as true assets with a business value. Assets which can be published, discovered and,
-eventually, traded. This way boosting the creation of multi-side markets where innovative services can be created.
+
+
+### Data Value Creation
 
 
 #### Metadata & Discovery Services
 
-This building block incorporates publishing and discovery mechanisms for data resources and services, making use of
-common descriptions of resources, services, and participants.
+Not yet part of the current release of i4Trust but soon to be incorporated, this building block incorporates publishing and 
+discovery mechanisms for data resources and services, making use of common descriptions of resources, services, 
+and participants.
 
 
 #### Publication & Marketplace Services
 
 To support the offering of data resources and services under defined terms and conditions, marketplaces must be
 established. This building block supports publication of these offerings, management of processes linked to the creation
-and monitoring of smart contracts (which clearly describe the rights and obligations for data and service usage), and
-access to data and services.
+and monitoring of smart contracts (which clearly describe the rights and obligations for data and service usage), 
+implementation of clearing house functions.
 
 The [Business API Ecosystem](https://github.com/FIWARE-TMForum/Business-API-Ecosystem) provides sellers the means for
 managing, publishing, and generating revenue of their products, apps, data, and services. The Business API Ecosystem
@@ -234,7 +216,8 @@ enables the monetization of different kinds of assets (both digital and physical
 from offer creation through to charging, accounting and revenue settlement and sharing. It relies on a set of standard
 APIs (and its reference implementations) provided by the TMForum in its TMF API ecosystem.
 
-[Idra](https://github.com/OPSILab/Idra) is a web application able to federate existing Open Data Management Systems
+Not yet part of the current release of i4Trust but soon to be incorporated, [Idra](https://github.com/OPSILab/Idra) is 
+a web application able to federate existing Open Data Management Systems
 (ODMS) based on different technologies providing a unique access point to search and discover open datasets coming from
 heterogeneous sources. It supports natively ODMS based on CKAN, DKAN, Socrata, Orion Context Broker (NGSI v2, NGSI-LD)
 and many other technologies: Idra provides also a set of APIs to federate ODMS not natively supported.
@@ -249,7 +232,11 @@ involvement of data marketplaces).
 
 
 
-## Integrating Building Blocks for data spaces
+
+
+
+
+## Integrating Building Blocks for the creation of i4Trust data spaces
 
 This section demonstrates common setups of the integration of the different building blocks for the creation of data
 spaces and links to deployment instructions for Kubernetes. It will be enriched over time.
