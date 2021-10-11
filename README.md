@@ -16,6 +16,13 @@ found in
 the [i4Trust Building Blocks](https://i4trust.github.io/building-blocks/docs/i4Trust-BuildingBlocks_202109.pdf) 
 documentation.
 
+In the case of questions just contact us
+* by sending a mail to helpdesk(at)i4trust.org or
+* by visiting the [i4Trust Helpdesk](https://spaces.fundingbox.com/spaces/i4trust-i4trust-helpdesk) and posting 
+  a question (Hit the button "New" and select "Questions i4Trust Technical")
+
+
+
 ## Contents
 
 -   [Background](#background)
