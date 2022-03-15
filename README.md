@@ -12,10 +12,12 @@ Access Management (IAM) functions enable to ensure that data is accessed by trus
 policies are enforced.
 
 > :information_source: **i4Trust Building Blocks Document (Version: 09/2021)**  
-> *Download the latest version of the i4Trust Building Blocks Document 
+> The i4Trust Building Blocks document contains a detailed description about i4Trust Data Spaces, the 
+> different Building Blocks and the reference example.
+>
+> *Download the latest version 
 > here:* [:arrow_down:](https://i4trust.github.io/building-blocks/docs/i4Trust-BuildingBlocks_202109.pdf)  
-> This document contains a detailed description about i4Trust Data Spaces, the different Building Blocks and 
-> the reference example.
+
 
 In the case of questions just contact us
 * by sending a mail to helpdesk(at)i4trust.org or
