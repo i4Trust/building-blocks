@@ -11,10 +11,11 @@ data usage/access policies to be enforced and may include pricing. Finally, comp
 Access Management (IAM) functions enable to ensure that data is accessed by trusted parties and that defined access 
 policies are enforced.
 
-A detailed description about i4Trust Data Spaces, the different Building Blocks and a reference example can be 
-found in 
-the [i4Trust Building Blocks](https://i4trust.github.io/building-blocks/docs/i4Trust-BuildingBlocks_202109.pdf) 
-documentation.
+> :information_source: **i4Trust Building Blocks Document (Version: 09/2021)**  
+> *Download the latest version of the i4Trust Building Blocks Document 
+> here:* [:arrow_down:](https://i4trust.github.io/building-blocks/docs/i4Trust-BuildingBlocks_202109.pdf)  
+> This document contains a detailed description about i4Trust Data Spaces, the different Building Blocks and 
+> the reference example.
 
 In the case of questions just contact us
 * by sending a mail to helpdesk(at)i4trust.org or
