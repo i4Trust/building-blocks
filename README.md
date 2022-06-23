@@ -15,8 +15,8 @@ policies are enforced.
 > The i4Trust Building Blocks document contains a detailed description about i4Trust Data Spaces, the 
 > different Building Blocks and the reference example.
 >
-> *Download: [:arrow_down:](https://i4trust.github.io/building-blocks/docs/i4Trust-BuildingBlocks_202109.pdf)
-> (Version: 09/2021)*
+> *Download: [:arrow_down:](https://i4trust.github.io/building-blocks/docs/i4Trust-BuildingBlocks_v2.0.pdf)
+> (Version 2.0, 06/2022)*
 
 
 In the case of questions just contact us
