@@ -22,8 +22,10 @@ jobs:
         
     - name: Create local changes
       run: |
-        git submodule update --init --recursive
-        git submodule update --recursive --remote
+        git pull --recurse-submodules
+        git submodule update --remote --recursive
+        #git submodule update --init --recursive
+        #git submodule update --recursive --remote
         
     - name: Commit files
       run: |
