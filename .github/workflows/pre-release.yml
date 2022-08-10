@@ -14,8 +14,7 @@ jobs:
   generate-version:
     name: Generate version
     runs-on: ubuntu-latest
-    needs: ["refresh-modules"]
-
+    
     outputs:
       version: ${{ steps.out.outputs.version }}
       plain-version: ${{ steps.out.outputs.plain-version }}
@@ -46,7 +45,7 @@ jobs:
 
           
   git-release:
-    needs: ["generate-version", "refresh-modules"]
+    needs: ["generate-version"]
     runs-on: ubuntu-latest
 
     steps:
