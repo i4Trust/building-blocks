@@ -25,7 +25,7 @@ jobs:
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git commit -m "New Release: Update Submodules" -a
+        git commit -m "New Release: Update Submodules" -a || echo "New Release: No updates to submodules"
 
     - name: Push changes
       uses: ad-m/github-push-action@master
