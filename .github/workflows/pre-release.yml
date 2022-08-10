@@ -11,39 +11,6 @@ on:
 
 jobs:
 
-  refresh-modules:
-    name: Refresh Submodules
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
-      with:
-        persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
-        fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
-        
-    - name: Create local changes
-      run: |
-        #git pull --recurse-submodules
-        #git submodule update --remote --recursive
-        git submodule update --init --recursive
-        git submodule update --recursive --remote
-        
-    - name: Commit files
-      run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git commit -m "Update Submodules" -a
-
-    - name: Extract branch name
-      shell: bash
-      run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
-      id: extract_branch
-        
-    - name: Push changes
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: ${{ steps.extract_branch.outputs.branch }} #${{ github.ref }}
-
   generate-version:
     name: Generate version
     runs-on: ubuntu-latest
