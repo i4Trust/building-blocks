@@ -12,8 +12,9 @@ on:
 jobs:
 
   generate-version:
+    name: Generate version
     runs-on: ubuntu-latest
-
+    
     outputs:
       version: ${{ steps.out.outputs.version }}
       plain-version: ${{ steps.out.outputs.plain-version }}
@@ -41,6 +42,8 @@ jobs:
         run: |
           echo "::set-output name=version::$(echo ${VERSION}-PRE-${{ steps.pr_number.outputs.nr }})"
           echo "::set-output name=plain-version::$(echo ${VERSION})"
+
+          
   git-release:
     needs: ["generate-version"]
     runs-on: ubuntu-latest

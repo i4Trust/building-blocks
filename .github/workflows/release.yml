@@ -7,8 +7,35 @@ on:
 
 jobs:
 
+  refresh-modules:
+    name: Refresh Submodules
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
+        fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
+        
+    - name: Create local changes
+      run: |
+        git submodule update --init --recursive
+        git submodule update --recursive --remote
+        
+    - name: Commit files
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git commit -m "New Release: Update Submodules" -a
 
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: main
+
+  
   generate-version:
+    name: Generate version
     runs-on: ubuntu-latest
 
     outputs:
@@ -34,7 +61,8 @@ jobs:
 
 
   git-release:
-    needs: ["generate-version"]
+    name: Git Release
+    needs: ["generate-version", "refresh-modules"]
     runs-on: ubuntu-latest
 
     steps:
