@@ -261,7 +261,7 @@ An NGSI based service provider can be any (right-time) data service or data proc
 underlying Context Broker could provide right-time data from different external devices via the NGSI API, or receive
 data for further data processing. Access to the Context Broker instance would be protected by an API PEP Proxy.
 
-These [instructions](https://github.com/i4Trust/tutorials/tree/main/Data-Service-Provider) describe how to set up
+These [instructions](https://github.com/i4Trust/tutorials/tree/main/PacketDelivery-ReferenceExample/Data-Service-Provider) describe how to set up
 an environment of such a data service provider based on the following components:
 
 -   Orion Context Broker as NGSI API service provider
@@ -279,5 +279,5 @@ In addition, all these components require different databases to be set up.
 The i4Trust Marketplace is based on the FIWARE Business API Ecosystem (BAE) which allows service providers to publish offerings
 around data assets, and service consumers to acquire access to them. A full instance is based on the BAE itself, the
 Keyrock Identity Manager and several databases. These
-[instructions](https://github.com/i4Trust/tutorials/tree/main/i4Trust-Marketplace) describe how to deploy a
+[instructions](https://github.com/i4Trust/tutorials/tree/main/PacketDelivery-ReferenceExample/i4Trust-Marketplace) describe how to deploy a
 full setup on Kubernetes.
