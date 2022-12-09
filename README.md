@@ -158,8 +158,7 @@ European Commission that enables the mutual recognition of national electronic i
 allowing European citizens and legal entities to use their national eIDs when accessing online services from other 
 European countries. Additionally, regional certificates that match the requirements similar to eIDAS are legally recognized 
 for the purpose of digital signatures and can be added and made interoperable.
-In addition to Keyrock, FIWARE also brings [VCBackend](https://github.com/FIWARE/VCBackend) and [VCWaltid](https://github.com/FIWARE/VCWaltid) to support [SIOP-2](https://openid.net/specs/openid-connect-self-issued-v2-1_0.html) and [OIDC4VP](https://openid.net/specs/openid-connect-4-verifiable-presentations-1_0-07.html.)
-
+In addition to Keyrock, FIWARE also brings [VCBackend](https://github.com/FIWARE/VCBackend) and [VCWaltid](https://github.com/FIWARE/VCWaltid) to support [SIOP-2](https://openid.net/specs/openid-connect-self-issued-v2-1_0.html) and [OIDC4VP](https://openid.net/specs/openid-connect-4-verifiable-presentations-1_0-07.html).
 
 #### Trusted exchange
 
