@@ -158,7 +158,10 @@ European Commission that enables the mutual recognition of national electronic i
 allowing European citizens and legal entities to use their national eIDs when accessing online services from other 
 European countries. Additionally, regional certificates that match the requirements similar to eIDAS are legally recognized 
 for the purpose of digital signatures and can be added and made interoperable.
+
 In addition to Keyrock, FIWARE also brings [VCBackend](https://github.com/FIWARE/VCBackend) and [VCWaltid](https://github.com/FIWARE/VCWaltid) to support [SIOP-2](https://openid.net/specs/openid-connect-self-issued-v2-1_0.html) and [OIDC4VP](https://openid.net/specs/openid-connect-4-verifiable-presentations-1_0-07.html).
+
+>:warning: Support for [SIOP-2](https://openid.net/specs/openid-connect-self-issued-v2-1_0.html) and [OIDC4VP](https://openid.net/specs/openid-connect-4-verifiable-presentations-1_0-07.html) is currently under review and not yet part of the published building blocks.
 
 #### Trusted exchange
 
@@ -185,21 +188,21 @@ relation with the Scheme Owner, and can check at the Scheme Owner whether other 
 Access and usage control guarantees enforcement of data access and usage policies defined as part of the terms and conditions established 
 when data resources or services are published or negotiated between providers and consumers. An API proxy plays the role of the 
 Policy Enforcement Point (PEP) and requires an additional Policy Decision Point (PDP). 
-In the current release of i4Trust, PEP and PDP functionalitie provided via libraries in [lua](https://github.com/FIWARE/lua-fiware-lib). The libraries can be used to implement plugins for various api-gateways, with a solution for the [Kong API-Gateway](https://github.com/Kong/kong) already [implemented by FIWARE](https://github.com/FIWARE/kong-plugins-fiware).
+In the current release of i4Trust, PEP and PDP functionalities are provided via libraries in [lua](https://github.com/FIWARE/lua-fiware-lib). The libraries can be used to implement plugins for various api-gateways, with a solution for the [Kong API-Gateway](https://github.com/Kong/kong) already [implemented by FIWARE](https://github.com/FIWARE/kong-plugins-fiware).
 The PDP functionality for authorization via VerifiableCredentials is provided as an additional component, the [DSBA-PDP](https://github.com/FIWARE/dsba-pdp) and can be integrated into the flow, using the same [Kong-Plugins](https://github.com/FIWARE/kong-plugins-fiware) as PEP.
-The [DSBA-PDP](https://github.com/FIWARE/dsba-pdp) uses the [EBSI Trusted Issuers Registry API](https://api-pilot.ebsi.eu/docs/apis/trusted-issuers-registry/latest#/) for evaluating if an issuer is allowed to issue certain credentials. The PDP provides a compatibility mechanism to use the [iShare delegation endpoint](https://dev.ishareworks.org/delegation/endpoint.html) as trusted issuers source. Additionally, the [iShare delegation endpoint](https://dev.ishareworks.org/delegation/endpoint.html) is used to evaluate the actual policies referenced by the roles in the received credential.
+The [DSBA-PDP](https://github.com/FIWARE/dsba-pdp) uses the [EBSI Trusted Issuers Registry API](https://api-pilot.ebsi.eu/docs/apis/trusted-issuers-registry/latest#/) for evaluating if an issuer is allowed to issue certain credentials. The PDP provides a compatibility mechanism to use the [iShare delegation endpoint](https://dev.ishare.eu/delegation/endpoint.html) as trusted issuers source. Additionally, the [iShare delegation endpoint](https://dev.ishare.eu/delegation/endpoint.html) is used to evaluate the actual policies referenced by the roles in the received credential.
 
 In addition, [Keyrock](https://github.com/ging/fiware-idm) also implements Policy Administration Point (PAP) and Policy 
 Management Point (PMP) standard [XACML](https://en.wikipedia.org/wiki/XACML) functions.
 
 For defining access policies, iSHARE brings the 
-[delegation evidence data model](https://dev.ishareworks.org/delegation/delegation-evidence.html) which is structured according 
+[delegation evidence data model](https://dev.ishare.eu/delegation/delegation-evidence.html) which is structured according 
 to a JSON port of 
 the XACML standard. A key functionality of iSHARE is delegating rights to another party, authorising them to act on your behalf. 
 In that sense, a delegation evidence expresses the delegation of rights from a delegator to the delegate . Rights are expressed in 
 rules in terms of allowed actions to be performed on resources, under the licenses as defined in policySets.
 
-Authorization capabilities through the SIOP-2/OIDC4VP flow are provided by [VCBackend](https://github.com/FIWARE/VCBackend) and [VCWaltid](https://github.com/FIWARE/VCWaltid). The combination of both can be used as issuer of VerfiableCredentials and as a verifier, creating [JWT's](https://jwt.io/) to access the backend secured by the [Kong-PEP](https://github.com/FIWARE/kong-plugins-fiware) and the [DSBA-PDP](https://github.com/FIWARE/dsba-pdp). A minimal wallte for storing the credentials is provided by the [VCWallet](https://github.com/FIWARE/VCWallet).
+Authorization capabilities through the SIOP-2/OIDC4VP flow are provided by [VCBackend](https://github.com/FIWARE/VCBackend) and [VCWaltid](https://github.com/FIWARE/VCWaltid). The combination of both can be used as issuer of VerfiableCredentials and as a verifier, creating [JWT's](https://jwt.io/) to access the backend secured by the [Kong-PEP](https://github.com/FIWARE/kong-plugins-fiware) and the [DSBA-PDP](https://github.com/FIWARE/dsba-pdp). A minimal wallet for storing the credentials is provided by the [VCWallet](https://github.com/FIWARE/VCWallet).
 
 
 
