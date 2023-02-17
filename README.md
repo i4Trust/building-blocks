@@ -11,6 +11,8 @@ data usage/access policies to be enforced and may include pricing. Finally, comp
 Access Management (IAM) functions enable to ensure that data is accessed by trusted parties and that defined access 
 policies are enforced.
 
+## i4Trust Building Blocks Document
+
 > :information_source: **i4Trust Building Blocks Document**  
 > The i4Trust Building Blocks document contains a detailed description about i4Trust Data Spaces, the 
 > different Building Blocks and the reference examples.
@@ -18,6 +20,17 @@ policies are enforced.
 > *Download: [:arrow_down:](https://i4trust.github.io/building-blocks/docs/i4Trust-BuildingBlocks_v3.0.pdf)
 > (Version 3.0, 09/2022)*
 
+> :construction: **i4Trust Building Blocks Document v4.0 - Under Review**  
+> There is an updated i4Trust Building Blocks document which incorporates a decentralised IAM based on VC/VP and DIDs 
+> in addition to the standard OIDC flows (section 6.4).  
+> Note, that this document is still under review and there might be changes in the final version of the document, 
+> but we are already sharing this draft for a first reference.
+>
+> *Download: [:arrow_down:](https://i4trust.github.io/building-blocks/docs/i4Trust-BuildingBlocks_v4.0_UnderReview.pdf)
+> (Version 4.0, 02/2023, Under Review)*
+
+
+## Contact
 
 In the case of questions just contact us
 * by sending a mail to helpdesk(at)i4trust.org or
