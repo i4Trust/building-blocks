@@ -9,6 +9,27 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
+- [Background](#background)
+- [Contact](#contact)
+- [Introduction to Data Spaces](#introduction-to-data-spaces)
+- [FIWARE and iSHARE Technology Building blocks](#fiware-and-ishare-technology-building-blocks)
+- [i4Trust Building Blocks Document](#i4trust-building-blocks-document)
+  - [Data Interoperability](#data-interoperability)
+    - [Data Exchange API](#data-exchange-api)
+    - [Data Models & Formats](#data-models--formats)
+    - [Provenance & Traceability](#provenance--traceability)
+  - [Data Sovereignty and Trust](#data-sovereignty-and-trust)
+    - [Identity Management](#identity-management)
+    - [Trusted exchange](#trusted-exchange)
+    - [Access & Usage Control / Policies](#access--usage-control--policies)
+  - [Data Value Creation](#data-value-creation)
+    - [Metadata & Discovery Services](#metadata--discovery-services)
+    - [Publication & Marketplace Services](#publication--marketplace-services)
+    - [Data Usage Accounting](#data-usage-accounting)
+- [Integrating Building Blocks for the creation of i4Trust data spaces](#integrating-building-blocks-for-the-creation-of-i4trust-data-spaces)
+  - [Data Service Provider](#data-service-provider)
+  - [Marketplace](#marketplace)
+
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 
