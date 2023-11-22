@@ -13,7 +13,6 @@
 - [Contact](#contact)
 - [Introduction to Data Spaces](#introduction-to-data-spaces)
 - [FIWARE and iSHARE Technology Building blocks](#fiware-and-ishare-technology-building-blocks)
-- [i4Trust Building Blocks Document](#i4trust-building-blocks-document)
   - [Data Interoperability](#data-interoperability)
     - [Data Exchange API](#data-exchange-api)
     - [Data Models & Formats](#data-models--formats)
@@ -192,8 +191,6 @@ i4Trust data spaces.
 
 The description of FIWARE and iSHARE building blocks for data spaces and the specification of flows linked to interaction 
 among them can be found in the following document:
-
-## i4Trust Building Blocks Document
 
 > :information_source: **i4Trust Building Blocks Document**  
 >
