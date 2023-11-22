@@ -55,23 +55,6 @@ the [Data Space Support Center](https://dssc.eu/) project (see
 endorsement [here](https://dssc.eu/page/Endorsements)).
 
 
-## i4Trust Building Blocks Document
-
-> :information_source: **i4Trust Building Blocks Document**  
-> The i4Trust Building Blocks document contains a detailed description about i4Trust Data Spaces, the 
-> different Building Blocks and the reference examples.
->
-> *Download: [:arrow_down:](https://i4trust.github.io/building-blocks/docs/i4Trust-BuildingBlocks_v3.0.pdf)
-> (Version 3.0, 09/2022)*
-
-> :construction: **i4Trust Building Blocks Document v4.0 - Under Review**  
-> There is an updated i4Trust Building Blocks document which incorporates a decentralised IAM based on VC/VP and DIDs 
-> in addition to the standard OIDC flows (section 6.4).  
-> Note, that this document is still under review and there might be changes in the final version of the document, 
-> but we are already sharing this draft for a first reference.
->
-> *Download: [:arrow_down:](https://i4trust.github.io/building-blocks/docs/i4Trust-BuildingBlocks_v4.0_UnderReview.pdf)
-> (Version 4.0, 02/2023, Under Review)*
 
 
 ## Contact
@@ -130,68 +113,73 @@ From a technical perspective, a data space can be built based on a number of sys
   - **data publication platforms** which harvest information about data and data services offered by organisations and provide 
 	means for users to discover them. 
 	
+![MainSystems](https://i4trust.github.io/building-blocks/img/main-systems.png "Main systems in a Data Space")
 
+Interoperability standards for data spaces need to be defined in three major pillars:
 
-
-
-
-
-## Background
-
-A data space is defined as a decentralised infrastructure for effective and trustworthy data sharing in data ecosystems 
-based on commonly agreed principles. From a technical perspective, a number of technology building blocks are 
-required ensuring:
-
--   **Data interoperability** - Data spaces should provide a solid framework for an effective exchange of data among 
-	participants, supporting full decoupling of data providers and consumers. This requires the adoption of 
-	a “common lingua” every participant uses, materialized in the adoption of common APIs for the data exchange, and 
-	the definition of common data models. Common mechanisms for traceability of data exchange transactions and data 
-	provenance, are also relevant.
-
--   **Data Sovereignty and trust** - Data spaces should bring technical means for guaranteeing that participants in a 
-	data space can trust each other and exercise sovereignty over data they share. This requires the adoption of common 
-	standards for managing the identity of participants, the verification of their truthfulness and the enforcement of 
-	policies defined for data access and usage control.
-
--   **Data value creation** - Data spaces should provide support for the creation of multi-sided markets where 
-	participants can generate value out of sharing data (i.e., creating data value chains). This requires the adoption 
-	of common mechanisms enabling the definition of terms and conditions (including pricing) linked to data offerings, 
-	the publication and discovery of such offerings and the management of all the necessary steps, including clearing, 
-	payment and billing functions, supporting the lifecycle of contracts that are established when a given participant 
-	acquires the rights to access and use data.
-
-Besides the adoption of a common technology foundation, data spaces also require governance, that is the adoption of a 
-number of business, operational and organizational agreements among participants. Business agreements, for example, 
-specify what kind of terms and conditions can regulate the sharing of data between participants and the legal framework 
-supporting contracts established through the data space. Operational agreements, on the other hand, regulate policies 
-that have to be enforced during data space operation like, for example, compliance with 
-GDPR (General Data Protection Regulation) or the 2nd Payment Services Directive (PSD2) in the finance sector. They may 
-also comprise the definition of tools that operators of cloud infrastructures or global services supporting data spaces 
-must implement, enabling auditing of certain processes or the adoption of cyber-security practices. In addition, 
-organizational agreements establish the governance bodies (very much like ICANN for the Internet). They deal with the 
-identification of concrete specifications that products implementing technology building blocks in a data space should 
-comply with, as well as the business and operational agreements to be adopted. The complete taxonomy of building blocks 
-required for creating data spaces is illustrated in the following figure.
+* **Data Exchange** - Data spaces should provide a solid framework for efficient data exchange among participants, 
+  supporting the complete decoupling of data providers and consumers. This requires the adoption of a “common lingua” 
+  every participant uses, materialised in the adoption of common APIs for the data exchange, and the definition of common 
+  data models. Common mechanisms for traceability of data exchange transactions and data provenance are also required.
+* **Data Sovereignty and trust** - Data spaces should bring technical means for guaranteeing that participants in a data 
+  space can trust each other and exercise sovereignty over the data they share. This requires the adoption of common standards 
+  for managing the identity of participants, the verification of their truthfulness, and the enforcement of policies agreed 
+  upon for accessing data and data services as well as for the usage of data.
+* **Data value creation** - Data spaces should support the creation of multi-sided markets where participants can generate 
+  value out of sharing data (i.e., creating data value chains). This requires the adoption of common mechanisms for specifying 
+  products (defined as combination of data and data services) the definition of terms and conditions (including pricing) linked 
+  to products offerings, the publication and discovery of such offerings, and the management of all the necessary steps 
+  supporting the lifecycle of contracts that are established when a given participant acquires the rights to access and use 
+  data after completion of a product order.
+  
+Besides adopting a common technology foundation, data spaces also require that participants adhere to a common governance 
+framework, defined based on a number of business, operational, and organisational agreements. For example, business agreements 
+specify what kind of terms and conditions can regulate data sharing between participants and the legal framework supporting 
+contracts established through the data space. On the other hand, operational agreements regulate policies that must be enforced 
+during data space operation, such as compliance with GDPR (General Data Protection Regulation) or the 2nd Payment Services 
+Directive (PSD2) in the finance sector. They may also comprise the definition of tools that operators of cloud infrastructures 
+or global services supporting data spaces must implement, enabling auditing certain processes or adopting agreed cyber-security 
+practices. Last but not least, organisational agreements establish the governance bodies (very much like ICANN for the Internet) 
+which govern the concrete release of standard technology specifications to be adopted, as well as business and operational 
+agreements to be used. The complete taxonomy of building blocks required for creating data spaces is illustrated 
+in the following figure.
 
 ![BuildingBlocks](https://i4trust.github.io/building-blocks/img/building-blocks.png "Data Spaces Building Blocks")
 
-Sharing of data within a given data space should not be limited to a single domain. This would severely limit the creation 
-of new innovative services since individuals and organizations usually act in multiple domains at the same time and many 
-opportunities will flourish when data generated within organizations operating in certain domain (data related to traffic 
-in cities, for example) is shared for its exploitation in processes relevant to other 
-domains (continuing with the example, logistics). Therefore, technology building blocks for data spaces must 
-be domain-agnostic. On the other hand, they should rely on open standards, allowing multiple infrastructure and global 
-service providers to emerge and support data spaces, without getting locked in any particular provider. Given this, 
-while making things work in living labs and pilots is relatively easy, the main challenge towards definition of successful 
-data spaces is the decision of what concrete standards and design principles are adopted, since they have to be accepted 
-by all participants.
+The task of adopting a common technology infrastructure and governance framework is daunting enough when confined to a single 
+data space, where a unanimous agreement among diverse stakeholders is needed. However, the complexity escalates when 
+considering the broader vision of a universal technology infrastructure and governance framework that underpins multiple 
+sector-agnostic data spaces, which would not only facilitate participation across various data spaces but also enable 
+seamless cross-domain data transactions, mirroring the universality and interoperability that characterise the World Wide 
+Web. Achieving alignment on this scale is a formidable challenge, as it requires harmonising the interests and technical 
+capabilities of many stakeholders across different industries and sectors. The goal is to establish a common ground that 
+supports the diverse characteristics of individual data spaces while fostering an integrated ecosystem where data can be 
+a fluid, powerful asset across the entire digital landscape.
 
 
 
-## Technology Building blocks
 
-This section describes the different open source components i4Trust brings, materializing the different technical building 
-blocks enabling the soft infrastructure and global services required for the creation of data spaces.
+## FIWARE and iSHARE Technology Building blocks
+
+This section describes the different FIWARE open source components which can be combined with iSHARE services and used under 
+iSHARE-compliant governance frameworks for building data spaces. These components can be integrated to build the data space 
+connectors participants need to deploy for connecting to the data space or can be used for building intermediary services like 
+data publication platforms or marketplaces.
+
+For convenience, we will be referring to data spaces powered by the combination of FIWARE and iSHARE building blocks as 
+i4Trust data spaces.
+
+The description of FIWARE and iSHARE building blocks for data spaces and the specification of flows linked to interaction 
+among them can be found in the following document:
+
+## i4Trust Building Blocks Document
+
+> :information_source: **i4Trust Building Blocks Document**  
+>
+> *Download: [:arrow_down:](https://i4trust.github.io/building-blocks/docs/i4Trust-BuildingBlocks_v4.0.pdf)
+> (Version 4.0, 02/2023)*
+
+
 
 
 ### Data Interoperability
@@ -207,7 +195,7 @@ In i4Trust data spaces, participants are expected to exchange digital twin data,
 entities representing physical world objects (e.g., a street, a room within a floor of a building, a vehicle) or real world 
 concepts (e.g., a trouble ticket, an alarm).
 
-The **NGSI API** is the API used in i4Trust for the exchange of digital twin data. Many different systems have been developed 
+The **NGSI API** is the API used in i4Trust data spaces for the exchange of digital twin data. Many different systems have been developed 
 using it in domains such as smart cities, smart manufacturing, smart energy, smart water, smart agrifood, smart ports, or smart 
 health. Digital twin data exchange based on the NGSI API is supported by any of the existing 
 FIWARE [Core Context Broker components](https://github.com/FIWARE/catalogue#core-context-broker-components) (Orion-LD, Scorpio 
@@ -257,7 +245,7 @@ for the purpose of digital signatures and can be added and made interoperable.
 
 In addition to Keyrock, FIWARE also brings [VCBackend](https://github.com/FIWARE/VCBackend) and [VCWaltid](https://github.com/FIWARE/VCWaltid) to support [SIOP-2](https://openid.net/specs/openid-connect-self-issued-v2-1_0.html) and [OIDC4VP](https://openid.net/specs/openid-connect-4-verifiable-presentations-1_0-07.html).
 
->:warning: Support for [SIOP-2](https://openid.net/specs/openid-connect-self-issued-v2-1_0.html) and [OIDC4VP](https://openid.net/specs/openid-connect-4-verifiable-presentations-1_0-07.html) is currently under review and not yet part of the published building blocks.
+
 
 #### Trusted exchange
 
@@ -372,9 +360,9 @@ an environment of such a data service provider based on the following components
 In addition, all these components require different databases to be set up.
 
 
-### i4Trust Marketplace
+### Marketplace
 
-The i4Trust Marketplace is based on the FIWARE Business API Ecosystem (BAE) which allows service providers to publish offerings
+Marketplace intermediary services can be based on the FIWARE Business API Ecosystem (BAE) which allows service providers to publish offerings
 around data assets, and service consumers to acquire access to them. A full instance is based on the BAE itself, the
 Keyrock Identity Manager and several databases. These
 [instructions](https://github.com/i4Trust/tutorials/tree/main/PacketDelivery-ReferenceExample/i4Trust-Marketplace) describe how to deploy a
