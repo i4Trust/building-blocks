@@ -79,16 +79,8 @@ endorsement [here](https://dssc.eu/page/Endorsements)).
 
 ## Contact
 
-iSHARE has following tools/channels for its community engagement and these channels are open for participants of i4trust as well as potential participants inspired by i4trust portfolio and/or framework and willing to create dataspaces or implement it in their dataspaces:
-* [iSHARE forum](https://forum.ishare.eu) where various topics are present and additional topics will be created and updated to make community management efficient. iSHARE will create dedicated topics for i4Trust where participants willing to use FIWARE building blocks for data spaces will be also able to explore the FIWARE community on Discord and interact there.
-* [iSHARE support portal](https://support.ishare.eu) where all the learnings from participants of iSHARE are being regularly curated leading to enhancing the knowledgebase for fellow participants to learn from others thereby fostering community practice and collaborations. Additionally, it is also a way for participants to request support needed from iSHARE towards them. Questions dedicatedly coming for i4Trust related topics will be co-addressed by iSHARE and FIWARE experts to help the community appropriately.
-* [iSHARE slack channels](https://join.slack.com/t/ishare-eu/shared_invite/zt-26q74saoj-r8jRjSNgvHx2wpv34iBZXQ) are used by all data spaces to work closely together and continuously find new opportunities for collaboration. 
-* [iSHARE Change Management](https://changes.ishare.eu) process enables data spaces to directly influence the further development of the iSHARE Trust Framework to accommodate the needs of data spaces. 
 
-Together these form a solid collaboration ground for participants to share, learn and contribute on the topic of dataspaces using iSHARE framework.
-
-
-You can also contact us on the FIWARE Community on Discord. Concretely, you may want to run a live conversation with us in 
+You can contact us on the FIWARE Community on Discord. Concretely, you may want to run a live conversation with us in 
 one of the following channels:
 
 * [data-space-connector](https://discord.gg/UahV9Crv3Q), where to carry out real-time discussions about the 
@@ -112,6 +104,14 @@ They can be found in
 this [i4Trust Helpdesk](https://spaces.fundingbox.com/spaces/i4trust-i4trust-helpdesk) space of the old community platform we had setup. 
 We will be copying relevant questions and their response to 
 the [ishare-i4trust-collaboration](https://discord.gg/FxFKtCQQzp) forum.
+
+In addition, iSHARE has following tools/channels for its community engagement and these channels are open for participants of i4trust as well as potential participants inspired by i4trust portfolio and/or framework and willing to create dataspaces or implement it in their dataspaces:
+* [iSHARE forum](https://forum.ishare.eu) where various topics are present and additional topics will be created and updated to make community management efficient. iSHARE will create dedicated topics for i4Trust where participants willing to use FIWARE building blocks for data spaces will be also able to explore the FIWARE community on Discord and interact there.
+* [iSHARE support portal](https://support.ishare.eu) where all the learnings from participants of iSHARE are being regularly curated leading to enhancing the knowledgebase for fellow participants to learn from others thereby fostering community practice and collaborations. Additionally, it is also a way for participants to request support needed from iSHARE towards them. Questions dedicatedly coming for i4Trust related topics will be co-addressed by iSHARE and FIWARE experts to help the community appropriately.
+* [iSHARE slack channels](https://join.slack.com/t/ishare-eu/shared_invite/zt-26q74saoj-r8jRjSNgvHx2wpv34iBZXQ) are used by all data spaces to work closely together and continuously find new opportunities for collaboration. 
+* [iSHARE Change Management](https://changes.ishare.eu) process enables data spaces to directly influence the further development of the iSHARE Trust Framework to accommodate the needs of data spaces. 
+
+Together these form a solid collaboration ground for participants to share, learn and contribute on the topic of dataspaces using iSHARE framework.
 
 
 
