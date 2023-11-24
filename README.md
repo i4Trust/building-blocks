@@ -204,6 +204,7 @@ deploy in order to connect to data spaces: the [FIWARE Data Space Connector](htt
 It is following the DSBA recommendations and bundles the components described in below building blocks. 
 Recipes are provided for an easy deployment on Kubernetes environments. 
 
+![BuildingBlocks-DSBA-DSC](https://i4trust.github.io/building-blocks/img/building-blocks-dsba-dsc.png "Data Spaces Building Blocks - DSBA Data Space Connector")
 
 
 
